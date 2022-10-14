@@ -1,0 +1,49 @@
+/*==========Var==========Start*/
+
+$desktop-gap: 20px;
+$small-gap: 10px;
+
+// Desktop-font
+$big-font-size: 24px;
+$mid-font-size: 18px;
+$sml-font-size: 16px;
+
+// <1100px-font
+$big2-font-size: 18px;
+$mid2-font-size: 14px;
+$sml2-font-size: 12px;
+
+/*==========Var==========End*/
+
+/*==========Mixin==========Start*/
+
+@mixin grid_template($template) { 
+//@include grid_template($template);
+
+  display: grid;
+  grid-template: $template;
+}
+
+@mixin grid_center($template) {
+//@include grid_center($template);
+
+  display: grid;
+  grid-template: $template;
+  align-items: center;
+  text-align: center;
+}
+
+@mixin grid_full($template, $j-items, $a-items, $j-content, $a-content) { 
+//@include grid_full($template, $j-items, $a-items, $j-content, $a-content);
+
+  display: grid;
+  grid-template: $template;
+
+  justify-items: $j-items; //горизонтальное выравнивание содержимого
+  align-items: $a-items; //вертикальное выравнивание содержимого
+
+  justify-content: $j-content; //горизонтальное выравнивание сетки
+  align-content: $a-content; //вертикальное выравнивание сетки
+}
+
+/*==========Mixin==========End*/

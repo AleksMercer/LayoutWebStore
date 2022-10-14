@@ -1,16 +1,18 @@
-main {
-  grid-area: main;
+Для header-main-footer
+
+name {
+  grid-area: name;
 }
 
 @media (max-width: 1100px) { // то что происходит до 1100px 
 
-  main {}
+name {}
 }
 @media (max-width: 750px) { // то что происходит до 750px 
 
-  main {}
+name {}
 }
 @media (max-width: 500px) { // то что происходит до 500px 
 
-  main {}
+name {}
 }

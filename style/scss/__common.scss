@@ -1,0 +1,59 @@
+/*==========Scroll==========*/
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #00000000;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #ffffff;
+}
+/*==========Scroll==========*/
+
+body {
+  background: url('../../media/pattern.png');
+  background-color: rgb(15, 15, 15);
+  
+  font-family: 'Roboto', sans-serif;
+  color: white;
+
+  display: grid;
+  grid-template: 1fr / 1fr minmax(1100px, 1500px) 1fr;
+  //column-gap: 10px;
+
+  .icon-style {
+    filter: invert(100%);
+    height: 28px;
+    //<img src="./" alt="" class="icon-style">
+  }
+  
+  .wrapper {
+    grid-column-start: 2;
+    display: grid;
+    grid-template: auto 1fr auto / 1fr;
+    grid-template-areas:"header"
+		                    "main"
+		                    "footer";
+    //row-gap: ;
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 1100px) { // то что происходит до 1100px 
+
+  body {
+    grid-template: 1fr / 1fr minmax(751px, 1100px) 1fr;
+  }
+}
+@media (max-width: 750px) { // то что происходит до 750px 
+
+  body {
+    grid-template: 1fr / 1fr minmax(501px, 750px) 1fr;
+  }
+}
+@media (max-width: 500px) { // то что происходит до 500px 
+
+  body {
+    grid-template: 1fr / 1fr minmax(auto, 500px) 1fr;
+  }
+}

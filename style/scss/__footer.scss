@@ -1,16 +1,16 @@
-main {
-  grid-area: main;
+footer {
+  grid-area: footer;
 }
 
 @media (max-width: 1100px) { // то что происходит до 1100px 
 
-  main {}
+  footer {}
 }
 @media (max-width: 750px) { // то что происходит до 750px 
 
-  main {}
+  footer {}
 }
 @media (max-width: 500px) { // то что происходит до 500px 
 
-  main {}
+  footer {}
 }
