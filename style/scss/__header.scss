@@ -3,7 +3,7 @@ header {
   @include grid_center(1fr / 0.15fr 1fr 0.15fr);
  
   .logo {
-    font-size: 60px;
+    font-size: $biggest-font;
   }
 
   .header-menu {

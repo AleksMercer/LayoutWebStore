@@ -19,12 +19,20 @@ body {
 
   display: grid;
   grid-template: 1fr / 1fr minmax(1100px, 1500px) 1fr;
-  //column-gap: 10px;
+  
 
   .icon-style {
     filter: invert(100%);
     height: 28px;
     //<img src="./" alt="" class="icon-style">
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: $big-font-size;
   }
   
   .wrapper {
@@ -34,7 +42,7 @@ body {
     grid-template-areas:"header"
 		                    "main"
 		                    "footer";
-    //row-gap: ;
+    gap: $desktop-gap;
     min-height: 100vh;
   }
 }
