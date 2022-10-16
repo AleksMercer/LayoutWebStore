@@ -21,18 +21,27 @@ body {
   grid-template: 1fr / 1fr minmax(1100px, 1500px) 1fr;
   
 
-  .icon-style {
+  .icon-big-style {
+    filter: invert(100%);
+    height: 32px;
+    //<img src="./" alt="" class="icon-big-style">
+  }
+  .icon-mid-style {
     filter: invert(100%);
     height: 28px;
-    //<img src="./" alt="" class="icon-style">
+    //<img src="./" alt="" class="icon-mid-style">
+  }
+  .icon-small-style {
+    filter: invert(100%);
+    height: 18px;
+    //<img src="./" alt="" class="icon-small-style">
   }
 
   h1 {
-    font-size: 30px;
+    font-size: $main-title-size;
   }
-
-  h3 {
-    font-size: $big-font-size;
+  h2 {
+    font-size: $sub-title-size;
   }
   
   .wrapper {

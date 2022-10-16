@@ -31,8 +31,6 @@ main {
         height: 90%;
         width: 97%;
       }
-
-      
     }
   }
 
@@ -42,23 +40,15 @@ main {
     row-gap: $desktop-gap;
 
     background-color: $color-1;
-    padding: 10px 30px;
-    
-    &__block {
-      @include grid_template(auto / 1fr);
-      row-gap: $desktop-gap;
-    }
+    padding: $indent 30px;
 
     &__list {
+      @include grid_template(repeat(2, auto) / 1fr);
+      row-gap: 5px;
 
       li {
-        font-size: $mid-font-size;
-        padding-left: $indent;
-        padding-bottom: $indent;
-      }
-
-      li:last-child {
-        padding-bottom: none;
+        font-size: $sml-text-size;
+        padding: 0 0 $indent $indent;
       }
     }
   }
@@ -66,7 +56,7 @@ main {
   .goods {
     grid-column: 2 / 3;
     background-color: $color-1;
-    padding: 15px;
+    padding: $indent;
     text-align: center;
   }
 }

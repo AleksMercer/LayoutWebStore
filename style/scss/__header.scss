@@ -10,12 +10,12 @@ header {
     @include grid_center(1fr / repeat(4, auto));
     
     &__burger-btn, & > a {
-      font-size: $big-font-size;
+      font-size: $big-text-size;
     }
   }
 
   .header-icon {
-    @include grid_center(1fr / repeat(3, 1fr));
+    @include grid_template(1fr / repeat(3, 1fr));
   }
 }
 
