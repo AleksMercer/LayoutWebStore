@@ -3,27 +3,16 @@ footer {
   @include grid_template(1fr auto / 1fr);
   row-gap: $desktop-gap;
 
-
   .info-block {
-    @include grid_center(repeat(2, 1fr) / 1fr);
+    @include grid_center(1fr / repeat(2, auto));
     row-gap: $desktop-gap;
     font-size: $sml-text-size;
-
-    .contacts {
-      @include grid_template(1fr / repeat(2, 1fr));
-    }
-
-    .timetable {
-      @include grid_template(1fr / repeat(2, 1fr));
-    }
   }
 
   .designed {
     font-size: $sml-text-size;
     text-align: center;
   }
-
-
 }
 
 @media (max-width: 1100px) { // то что происходит до 1100px 
