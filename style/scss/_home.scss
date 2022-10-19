@@ -32,7 +32,7 @@ main {
   }
 
   .catalog {
-    @include grid_template(repeat(3, auto) / 1fr);
+    @include grid_template(repeat(2, auto) / 1fr);
     align-content: start;
     row-gap: $desktop-gap;
 
@@ -52,13 +52,19 @@ main {
 
   .goods {
     grid-column: 2 / 3;
-    @include grid_template(auto 1fr / 1fr);
+    @include grid_template(auto 1fr auto / 1fr);
     background-color: $color-1;
     padding: $indent;
     row-gap: $desktop-gap;
 
-    h1 {
-      text-align: center;
+    &__title-filter {
+      @include grid_center(1fr / 1fr);
+      position: relative;
+      
+      h2 {
+        position: absolute;
+        right: 0;
+      }
     }
 
     &__block {
@@ -133,6 +139,12 @@ main {
           }
         }
       }
+    }
+
+    &__load {
+      background-color: rgba(0, 0, 0, 0);
+      font-size: $mid-text-size;
+      text-align: center;
     }
   }
 }

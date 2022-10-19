@@ -14,8 +14,10 @@ body {
   background: url('../../media/pattern.png');
   background-color: rgb(15, 15, 15);
   
-  font-family: 'Roboto', sans-serif;
-  color: white;
+  * {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+  }
 
   display: grid;
   grid-template: 1fr / 1fr minmax(1100px, 1500px) 1fr;
@@ -24,17 +26,17 @@ body {
   .icon-big-style {
     filter: invert(100%);
     height: 32px;
-    //<img src="./" alt="" class="icon-big-style">
+    //class="icon-big-style"
   }
   .icon-mid-style {
     filter: invert(100%);
     height: 24px;
-    //<img src="./" alt="" class="icon-mid-style">
+    //class="icon-mid-style"
   }
   .icon-small-style {
     filter: invert(100%);
     height: 18px;
-    //<img src="./" alt="" class="icon-small-style">
+    //class="icon-small-style"
   }
 
   h1 {
