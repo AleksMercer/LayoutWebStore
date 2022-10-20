@@ -4,7 +4,7 @@ footer {
   row-gap: $desktop-gap;
 
   .info-block {
-    @include grid_center(1fr / repeat(2, auto));
+    @include grid_center(repeat(2, 1fr) / repeat(2, auto));
     row-gap: $desktop-gap;
     font-size: $sml-text-size;
   }
@@ -16,14 +16,29 @@ footer {
 }
 
 @media (max-width: 1100px) { // то что происходит до 1100px 
-
   footer {}
 }
+
 @media (max-width: 750px) { // то что происходит до 750px 
+  footer {
 
-  footer {}
+    .info-block {
+      @include grid_center(repeat(4, 1fr) / 1fr);
+      row-gap: $desktop-gap;
+      font-size: $sml-text-size;
+    }
+  }
 }
-@media (max-width: 500px) { // то что происходит до 500px 
 
-  footer {}
+@media (max-width: 500px) { // то что происходит до 500px 
+  footer {
+     
+    .info-block__timetable > span  {
+      display: none;
+    }
+    
+    .designed > span {
+      display: none;
+    }
+  }
 }

@@ -32,7 +32,6 @@ header {
 }
 
 @media (max-width: 1100px) { // то что происходит до 1100px 
-
   header {
     @include grid_center(1fr / 1fr auto 1fr);
 
@@ -55,24 +54,31 @@ header {
 }
 
 @media (max-width: 750px) { // то что происходит до 750px 
-
   header {}
 }
 
 @media (max-width: 500px) { // то что происходит до 500px 
-
   header {
- 
+    @include grid_center(1fr / 1fr repeat(2, auto));
+    column-gap: $small-gap;
+    
     .logo {
       font-size: 45px;
+      order: -1;
+      justify-self: start;
     }
 
     .header-menu > .header-menu__burger-btn > p {
       display: none;
     }
 
+    .header-menu {
+      order: 1;
+      justify-self: end;
+    }
+
     .header-icon {
-      column-gap: $indent;
+      column-gap: $small-gap;
     }
     
   }
