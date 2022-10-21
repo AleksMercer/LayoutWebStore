@@ -21,18 +21,14 @@ footer {
 
 @media (max-width: 750px) { // то что происходит до 750px 
   footer {
+    row-gap: 0px;
 
     .info-block {
-      @include grid_center(repeat(4, 1fr) / 1fr);
-      row-gap: $desktop-gap;
+      @include grid_center(repeat(2, 1fr) auto / repeat(2, 1fr));
+      row-gap: $small-gap;
       font-size: $sml-text-size;
     }
-  }
-}
 
-@media (max-width: 500px) { // то что происходит до 500px 
-  footer {
-     
     .info-block__timetable > span  {
       display: none;
     }
@@ -41,4 +37,8 @@ footer {
       display: none;
     }
   }
+}
+
+@media (max-width: 500px) { // то что происходит до 500px 
+  footer {}
 }

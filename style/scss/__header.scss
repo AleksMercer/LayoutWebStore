@@ -54,10 +54,6 @@ header {
 }
 
 @media (max-width: 750px) { // то что происходит до 750px 
-  header {}
-}
-
-@media (max-width: 500px) { // то что происходит до 500px 
   header {
     @include grid_center(1fr / 1fr repeat(2, auto));
     column-gap: $small-gap;
@@ -80,6 +76,9 @@ header {
     .header-icon {
       column-gap: $small-gap;
     }
-    
   }
+}
+
+@media (max-width: 500px) { // то что происходит до 500px 
+  header {}
 }
