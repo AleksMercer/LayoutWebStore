@@ -73,6 +73,6 @@ body {
 @media (max-width: 500px) { // то что происходит до 500px 
 
   body {
-    grid-template: 1fr / 1fr minmax(450px, 500px) 1fr;
+    grid-template: 1fr / 1fr minmax(320px, 500px) 1fr;
   }
 }

@@ -1,6 +1,6 @@
-main {
+.main-home {
   grid-area: main;
-  @include grid_template(400px 1fr/ auto 1fr);
+  @include grid_template(400px 1fr / auto 1fr);
   gap: $desktop-gap;
 
   .promotion {
@@ -41,6 +41,9 @@ main {
       li {
         font-size: $sml-text-size;
         padding: 0 0 $indent $indent;
+      }
+      li:hover {
+        color: greenyellow;
       }
     }
   }
@@ -104,14 +107,14 @@ main {
         
         &__price {
           @include grid_center(1fr / auto 1fr);
+          background-color: rgba(0, 0, 0, 0);
           justify-self: end;
           align-self: end;
           font-size: $mid-text-size;
         }
       }
 
-      .card-hover:hover {
-        
+      .card-hover:hover {   
         @include grid_template(repeat(2, auto) 1fr auto / 1fr);
         row-gap: $desktop-gap;
         background-color: #0000009a;
@@ -149,11 +152,15 @@ main {
       font-size: $mid-text-size;
       text-align: center;
     }
+
+    &__load:hover {
+      color: greenyellow;
+    }
   }
 }
 
 @media (max-width: 1100px) { // то что происходит до 1100px 
-  main {  
+  .main-home {  
     .catalog {
       display: none;
     }
@@ -181,7 +188,7 @@ main {
 }
 
 @media (max-width: 750px) { // то что происходит до 750px 
-  main {
+  .main-home {
     @include grid_template(auto 1fr / auto 1fr);
     gap: $small-gap;
 
@@ -225,52 +232,55 @@ main {
 }
 
 @media (max-width: 550px) { // то что происходит до 500px 
-  main {
+  .main-home {
     .goods {
       &__block {
-        @include grid_auto-fit(48%, $indent);
-  
+        @include grid_template(auto / 1fr);
+        row-gap: $small-gap;
+
         .card {
-          @include grid_template(80% repeat(2, 1fr) / 1fr);
-          height: 350px;
+          @include grid_template(repeat(3, auto) / 1.5fr 1fr);
+          column-gap: $small-gap;
+          height: 15vh;
           
           &__img > p > span {
             display: none;
           }
 
-          &__sub-name {
-            display: none;
+          &__img {
+            grid-row: 1 / 4 ;
           }
 
-          &__name, &__price {
+          &__name, &__sub-name, &__price {
             font-size: $mid-text-size;
             text-align: center;
           }
-          
+
           &__price {
+            display: none;
+          }
+        
+          &__price-hover {
+            @include grid_center(1fr / auto 1fr);
+            background-color: rgba(0, 0, 0, 0);
             justify-self: center;
-            align-self: center;
+            align-self: end;
+            font-size: $big-text-size;
 
             p > span {
               display: none;
             }
           }
         }
-  
-        .card-hover:hover {
+
+        .card-hover:hover {       
           @include grid_template(auto 1fr auto / 1fr);
-          row-gap: $small-gap;
 
-          .card__price-hover {
-            justify-self: center;
-            align-self: center;
-
-            p > span {
-              display: none;
-            }
+          .card__sub-name {
+            display: none;
           }
         }
-      }
+      } 
     }
   }
 }

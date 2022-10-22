@@ -56,6 +56,15 @@ $M-sml-text-size: 16px;
   //значения: start, end, center
 }
 
+@mixin grid_self( $j-self, $a-self) { 
+//@include grid_self( $j-self, $a-self);
+//Выравнивание содержимого конкретного self
+  
+  justify-self: $j-self; //горизонтальное выравнивание содержимого
+  align-self: $a-self; //вертикальное выравнивание содержимого
+  //значения: start, end, center
+}
+
 @mixin grid_content($j-content, $a-content) { 
 //@include grid_content($j-content, $a-content);
 //Выравнивание сетки
@@ -76,6 +85,5 @@ $M-sml-text-size: 16px;
 
   //создает карточки заданной ширины и заданным гэпом
 }
-
 
 /*==========Mixin==========End*/

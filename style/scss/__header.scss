@@ -13,6 +13,10 @@ header {
       font-size: $big-text-size;
     }
 
+    &__burger-btn > p:hover, & > a:hover {
+      color: greenyellow;
+    }
+
     &__burger-btn {
       @include grid_template(1fr / repeat(2, auto));
       

@@ -40,5 +40,9 @@ footer {
 }
 
 @media (max-width: 500px) { // то что происходит до 500px 
-  footer {}
+  footer {
+    * {
+      font-size: $M-sml-text-size;
+    }
+  }
 }
