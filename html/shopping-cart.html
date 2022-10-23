@@ -26,55 +26,48 @@
         <a href="#"><img src="./../media/icon/search.svg" alt="" class="icon-big-style"></a>
       </nav>
     </header>
-    <main class="main-product">
-      <aside class="catalog">
-        <h1>—[ Catalog ]—</h1>
-        <nav class="catalog__block">
-          <nav class="catalog__list">
-            <h2>List<img src="./../media/icon/arrow_up.svg" alt="˄" class="icon-big-style"></h2>
-            <ul>
-              <li>list_element</li>
-              <li>list_element</li>
-              <li>list_element</li>
-              <li>list_element</li>
-              <li>list_element</li>
-              <li>list_element</li>
-              <li>list_element</li>
-              <li>list_element</li>
-            </ul>
-          </nav>
-          <nav class="catalog__list">
-            <h2>List<img src="./../media/icon/arrow_down.svg" alt="˅" class="icon-big-style"></h2>
-            <ul></ul>
-          </nav>
-          <nav class="catalog__list">
-            <h2>List<img src="./../media/icon/arrow_up.svg" alt="˄" class="icon-big-style"></h2>
-            <ul>
-              <li>list_element</li>
-              <li>list_element</li>
-              <li>list_element</li>
-              <li>list_element</li>
-              <li>list_element</li>
-            </ul>
-          </nav>
-          <nav class="catalog__list">
-            <h2>List<img src="./../media/icon/arrow_down.svg" alt="˅" class="icon-big-style"></h2>
-            <ul></ul>
-          </nav>
-        </nav>
-      </aside>
-      <section class="goods">
-        <div class="goods__path-return">
-          <h2>Goods / product_1</h2>
-          <a href="./../index.html" class="return-btn"><span>Return</span><img src="./../media/icon/return.svg" alt="" class="icon-big-style"></a>
-        </div>
-        <div class="goods__block">
-          <div class="goods__pic"><p>Picture_</p></div>
-          <div class="goods__info"><p>Information_</p></div>
-          <div class="goods__specification"><p>Specification_</p></div>
-          <div class="goods__description"><p>Description_</p></div>
-        </div>
-      </section>
+    <main class="main-shopping-cart">
+      <h1>Shopping-cart_</h1>
+        <section class="forms">
+          <form action="http" method="post" enctype="multipart/form-data" class="forms__fields">
+            <fieldset>
+              <legend>Shopping-cart-forms</legend>
+              <div>
+                <p>Full name:</p>
+                <input type="text" placeholder="Фамилия Имя Отчество" name="user" required>
+                <p>Pass:</p>
+                <input type="password" placeholder="Пароль" name="userpass" required>
+                <p>Phone:</p>
+                <input  type="tel" placeholder="Номер телефона" name="userphone" required>
+                <p>Email:</p>
+                <input type="email" placeholder="Email/Gmail" name="usermail">
+              </div>
+              <div>
+                <p>Gender:</p>
+                <label><p>Human:<input type="radio" name="usergender" value="male" required></p></label>
+                <label><p>Alocoholic:<input type="radio" name="usergender" value="female"></p></label>
+              </div>
+              <div>
+                <p>А<input type="checkbox" name="car" value="yes"></p>
+                <p>К<input type="checkbox" name="apartment" value="yes"></p>
+                <p>Д<input type="checkbox" name="house" value="yes"></p>
+              </div>
+              <div>
+                <p><textarea name="textarea"></textarea></p>
+              </div>
+              <div>
+                <input type="file" name="userdocpic">
+              </div>
+              <div>
+                <input type="submit" value="Отправить">
+              </div>
+              <div>
+                <input type="reset" value="Сброс">
+              </div>
+            </fieldset>
+          </form>
+          <div class="forms__info"></div>
+         </section>
     </main>
     <footer>
       <div class="info-block">

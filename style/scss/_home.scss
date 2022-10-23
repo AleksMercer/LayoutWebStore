@@ -97,8 +97,12 @@
           }
         }
 
-        &__name, &__sub-name {
+        a > p {
           font-size: $sml-text-size;
+        }
+
+        a > p:hover {
+          color: greenyellow;
         }
         
         &__description, &__price-hover {
@@ -124,7 +128,7 @@
           display: none;
         }
 
-        .card__name, .card__sub-name {
+        a > p {
           font-size: $mid-text-size;
           text-align: center;
         }
@@ -241,7 +245,7 @@
         .card {
           @include grid_template(repeat(3, auto) / 1.5fr 1fr);
           column-gap: $small-gap;
-          height: 15vh;
+          height: auto;
           
           &__img > p > span {
             display: none;
@@ -251,7 +255,7 @@
             grid-row: 1 / 4 ;
           }
 
-          &__name, &__sub-name, &__price {
+          a > p, &__price {
             font-size: $mid-text-size;
             text-align: center;
           }

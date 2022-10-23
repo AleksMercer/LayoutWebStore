@@ -39,7 +39,7 @@
         justify-self: start;
       }
 
-      button {
+      a {
         font-size: $big-text-size;
       }
     }
@@ -129,7 +129,8 @@
         h2 {
           font-size: $mid-text-size;
         }
-        button > span{
+        
+        a > span{
           display: none;
         }
       }

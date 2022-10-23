@@ -1,0 +1,37 @@
+.main-shopping-cart {
+  grid-area: main;
+  @include grid_template(auto 1fr / 1fr);
+  gap: $desktop-gap;
+  padding: $indent;
+  background-color: $color-1;
+
+  h1 {
+    text-align: center;
+  }
+
+  .forms {
+    @include grid_template(1fr / 1fr 1fr);
+
+  }
+}
+
+@media (max-width: 1100px) { // то что происходит до 1100px 
+
+.main-shopping-cart {
+
+}
+}
+
+@media (max-width: 750px) { // то что происходит до 750px 
+
+.main-shopping-cart {
+
+}
+}
+
+@media (max-width: 500px) { // то что происходит до 500px 
+
+.main-shopping-cart {
+
+}
+}

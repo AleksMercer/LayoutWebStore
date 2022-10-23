@@ -410,8 +410,11 @@ header .header-icon {
       align-content: center;
   font-size: 28px;
 }
-.main-home .goods__block .card__name, .main-home .goods__block .card__sub-name {
+.main-home .goods__block .card a > p {
   font-size: 18px;
+}
+.main-home .goods__block .card a > p:hover {
+  color: greenyellow;
 }
 .main-home .goods__block .card__description, .main-home .goods__block .card__price-hover {
   display: none;
@@ -440,7 +443,7 @@ header .header-icon {
 .main-home .goods__block .card-hover:hover .card__img, .main-home .goods__block .card-hover:hover .card__price {
   display: none;
 }
-.main-home .goods__block .card-hover:hover .card__name, .main-home .goods__block .card-hover:hover .card__sub-name {
+.main-home .goods__block .card-hover:hover a > p {
   font-size: 22px;
   text-align: center;
 }
@@ -551,7 +554,7 @@ header .header-icon {
     -webkit-column-gap: 10px;
        -moz-column-gap: 10px;
             column-gap: 10px;
-    height: 15vh;
+    height: auto;
   }
   .main-home .goods__block .card__img > p > span {
     display: none;
@@ -559,7 +562,7 @@ header .header-icon {
   .main-home .goods__block .card__img {
     grid-row: 1/4;
   }
-  .main-home .goods__block .card__name, .main-home .goods__block .card__sub-name, .main-home .goods__block .card__price {
+  .main-home .goods__block .card a > p, .main-home .goods__block .card__price {
     font-size: 22px;
     text-align: center;
   }
@@ -635,7 +638,7 @@ header .header-icon {
 .main-product .goods__path-return h2 {
   justify-self: start;
 }
-.main-product .goods__path-return button {
+.main-product .goods__path-return a {
   font-size: 26px;
 }
 .main-product .goods__block {
@@ -710,7 +713,7 @@ header .header-icon {
   .main-product .goods__path-return h2 {
     font-size: 22px;
   }
-  .main-product .goods__path-return button > span {
+  .main-product .goods__path-return a > span {
     display: none;
   }
   .main-product .goods__block div {
@@ -723,6 +726,22 @@ header .header-icon {
     font-size: 50px;
   }
 }
+.main-shopping-cart {
+  grid-area: main;
+  display: grid;
+  grid-template: auto 1fr/1fr;
+  gap: 15px;
+  padding: 10px;
+  background-color: rgba(217, 217, 217, 0.3019607843);
+}
+.main-shopping-cart h1 {
+  text-align: center;
+}
+.main-shopping-cart .forms {
+  display: grid;
+  grid-template: 1fr/1fr 1fr;
+}
+
 footer {
   grid-area: footer;
   display: grid;
