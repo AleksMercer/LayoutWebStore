@@ -2,10 +2,13 @@
 @import "./__vars"; //переменные
 
 @import "./__common"; //общие параметры
+
 @import "./__header"; //верхняя, общая часть страницы
 
 @import "./_home"; //главная страница
 @import "./_product"; //страница товара
-@import "./_shopping-cart"; //страница товара
+@import "./_shopping-cart"; //корзина
+@import "./contact-details"; //контакты
+@import "./about-us"; //о компании
 
 @import "./__footer"; //нижняя, общая часть страницы
