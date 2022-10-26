@@ -882,12 +882,48 @@ header .header-icon {
 .main-contact-details {
   grid-area: main;
   display: grid;
-  grid-template: 1;
+  grid-template: repeat(2, 1fr)/repeat(2, 1fr);
   gap: 10px;
   padding: 10px;
   background-color: rgba(217, 217, 217, 0.3019607843);
 }
+.main-contact-details__info {
+  display: grid;
+  grid-template: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 60px;
+  background-color: rgba(217, 217, 217, 0.3019607843);
+  border-radius: 5%;
+}
+.main-contact-details__map {
+  grid-column: 1/3;
+}
+.main-contact-details__map iframe {
+  width: 100%;
+  height: 100%;
+  -webkit-filter: grayscale(1) invert(100%);
+          filter: grayscale(1) invert(100%);
+}
 
+@media (max-width: 1100px) {
+  .main-contact-details {
+    display: grid;
+    grid-template: repeat(3, 1fr)/1fr;
+  }
+  .main-contact-details__info {
+    grid-column: 1/3;
+    border-radius: 3%/5%;
+  }
+}
+@media (max-width: 500px) {
+  .main-contact-details__info {
+    font-size: 34px;
+    border-radius: 7%;
+  }
+}
 .main-about-us {
   grid-area: main;
   display: grid;
