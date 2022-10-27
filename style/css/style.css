@@ -927,12 +927,95 @@ header .header-icon {
 .main-about-us {
   grid-area: main;
   display: grid;
-  grid-template: 1;
-  gap: 10px;
+  grid-template: auto/1fr;
+  -ms-flex-line-pack: start;
+      align-content: start;
+  gap: 15px;
   padding: 10px;
   background-color: rgba(217, 217, 217, 0.3019607843);
 }
+.main-about-us * > p {
+  font-size: 18px;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.main-about-us h2 {
+  text-align: center;
+}
+.main-about-us .pic {
+  display: grid;
+  grid-template: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  align-self: center;
+  font-size: 26px;
+  background-color: rgba(217, 217, 217, 0.3019607843);
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
+}
+.main-about-us .history, .main-about-us .staff, .main-about-us .whywe {
+  display: grid;
+  grid-template: auto 1fr/1fr;
+  row-gap: 15px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.main-about-us .history .pic-right, .main-about-us .staff .pic-right, .main-about-us .whywe .pic-right {
+  display: grid;
+  grid-template: 1fr/1fr auto;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+}
+.main-about-us .history .pic-left, .main-about-us .staff .pic-left, .main-about-us .whywe .pic-left {
+  display: grid;
+  grid-template: 1fr/auto 1fr;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+}
+.main-about-us .history .pic-left .pic, .main-about-us .staff .pic-left .pic, .main-about-us .whywe .pic-left .pic {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
 
+@media (max-width: 750px) {
+  .main-about-us {
+    gap: 10px;
+  }
+  .main-about-us * > p {
+    font-size: 16px;
+  }
+  .main-about-us h2 {
+    font-size: 26px;
+  }
+  .main-about-us .pic {
+    font-size: 26px;
+    width: 150px;
+    height: 150px;
+  }
+  .main-about-us .history, .main-about-us .staff, .main-about-us .whywe {
+    row-gap: 10px;
+  }
+  .main-about-us .history .pic-right, .main-about-us .history .pic-center, .main-about-us .history .pic-left, .main-about-us .staff .pic-right, .main-about-us .staff .pic-center, .main-about-us .staff .pic-left, .main-about-us .whywe .pic-right, .main-about-us .whywe .pic-center, .main-about-us .whywe .pic-left {
+    display: none;
+  }
+  .main-about-us .history .pic-mobile, .main-about-us .staff .pic-mobile, .main-about-us .whywe .pic-mobile {
+    display: grid;
+    grid-template: auto 1fr/1fr;
+    row-gap: 10px;
+  }
+  .main-about-us .history .pic-mobile .pic, .main-about-us .staff .pic-mobile .pic, .main-about-us .whywe .pic-mobile .pic {
+    justify-self: center;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
 footer {
   grid-area: footer;
   display: grid;
