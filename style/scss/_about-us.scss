@@ -29,7 +29,7 @@
     @include grid_template(auto 1fr / 1fr);
     row-gap: $desktop-gap;
     padding: $indent;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: $color-3;
 
     .pic-right {
       @include grid_template(1fr / 1fr auto);

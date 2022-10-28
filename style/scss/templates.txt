@@ -1,5 +1,3 @@
-Для header-main-footer
-
 name {
   grid-area: main;
 }
@@ -16,3 +14,45 @@ name {}
 name {}
 }
 
+
+<header>
+  <a href="./../index.html" class="logo">Logo</a>
+  <nav class="header-menu">
+    <button class="header-menu__burger-btn"><img src="./../media/icon/menu.svg" alt="" class="icon-big-style"><p>Menu</p></button>
+    <a href="#">menu_el_first</a>
+    <a href="./сontact-details.html">Contacts</a>
+    <a href="./about-us.html">About us</a>
+  </nav>
+  <nav class="header-icon">
+    <a href="./personal-area.html"><img src="./../media/icon/person.svg" alt="" class="icon-big-style"></a>
+    <a href="./shopping-cart.html"><img src="./../media/icon/shopping_cart.svg" alt="" class="icon-big-style"></a>
+    <a href="#"><img src="./../media/icon/search.svg" alt="" class="icon-big-style"></a>
+  </nav>
+</header>
+
+
+<footer>
+  <div class="info-block">
+    <div class="info-block__tel">
+      <img src="./../media/icon/call.svg" alt="" class="icon-small-style">
+      <a href="tel:+1(234) 567-89-10">+ 1 (234) 567-89-10</a>
+    </div>
+    <div class="info-block__mail">
+      <img src="./../media/icon/mail.svg" alt="" class="icon-small-style">
+      <a href="mailto:web-store@some.com">web-store@some.com</a>
+    </div>
+    <div class="info-block__timetable">
+        <img src="./../media/icon/calendar.svg" alt="" class="icon-small-style">
+        Mon<span>day</span> - Thu<span>rsday</span>
+        <img src="./../media/icon/time.svg" alt="" class="icon-small-style">
+        9:00<span>AM</span> - 9:00<span>PM</span>
+    </div>
+    <div class="info-block__timetable">
+        <img src="./../media/icon/calendar.svg" alt="" class="icon-small-style">
+        Fri<span>day</span> - Sun<span>day</span>
+        <img src="./../media/icon/time.svg" alt="" class="icon-small-style">
+        9:00<span>AM</span> - 6:00<span>PM</span>
+    </div>
+  </div>
+  <div class="designed">—<span> Site designed and created by</span> <a href="https://github.com/AleksMercer">Mercer </a>© 2022 —</div>
+</footer>

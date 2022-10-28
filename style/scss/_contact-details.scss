@@ -9,7 +9,6 @@
     @include grid_center(1fr / 1fr);
     font-size: $biggest-font;
     background-color: $color-1;
-    border-radius: 5%;
   }
 
   &__map {
@@ -29,7 +28,6 @@
 
   &__info {
     grid-column: 1 / 3;
-    border-radius: 3% / 5%;
   }
 }
 }
@@ -42,7 +40,6 @@
 .main-contact-details {
   &__info {
     font-size: $main-title-size;
-    border-radius: 7%;
   }
 }
 }
