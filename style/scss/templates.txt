@@ -56,3 +56,7 @@ name {}
   </div>
   <div class="designed">—<span> Site designed and created by</span> <a href="https://github.com/AleksMercer">Mercer </a>© 2022 —</div>
 </footer>
+
+<!--Skripts-->
+<script src="./../js/common.js"></script>
+<script src="./../js"></script>

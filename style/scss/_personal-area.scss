@@ -52,7 +52,7 @@
       row-gap: $desktop-gap;
 
       &__form {
-        @include grid_template(auto / auto 300px);
+        @include grid_template(auto / auto 350px);
         gap: $desktop-gap; 
       }
     }
@@ -76,10 +76,6 @@
   
       * > p {
         font-size: $M-sml-text-size;
-      }
-  
-      input {
-        width: 100%;
       }
   
       .button-block {  
