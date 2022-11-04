@@ -4,7 +4,7 @@
   gap: $desktop-gap;
 
   .catalog {
-    @include grid_template(repeat(2, auto) / 1fr);
+    @include grid_template(auto / 1fr);
     align-content: start;
     row-gap: $desktop-gap;
 
@@ -13,12 +13,17 @@
 
     &__list {
       @include grid_template(repeat(2, auto) / 1fr);
-      row-gap: 5px;
+      row-gap: $indent;
+
+      a {
+        font-size: $sub-title-size;
+      }  
 
       li {
         font-size: $sml-text-size;
         padding: 0 0 $indent $indent;
       }
+      
       li:hover {
         color: $color-2;
       }

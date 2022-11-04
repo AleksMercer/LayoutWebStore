@@ -27,7 +27,7 @@
   }
 
   .catalog {
-    @include grid_template(repeat(2, auto) / 1fr);
+    @include grid_template(auto / 1fr);
     align-content: start;
     row-gap: $desktop-gap;
 
@@ -36,12 +36,17 @@
 
     &__list {
       @include grid_template(repeat(2, auto) / 1fr);
-      row-gap: 5px;
+      row-gap: $indent;
+
+      a {
+        font-size: $sub-title-size;
+      }  
 
       li {
         font-size: $sml-text-size;
         padding: 0 0 $indent $indent;
       }
+      
       li:hover {
         color: $color-2;
       }
@@ -137,14 +142,14 @@
           text-align: center;
           font-size: $sml-text-size;
           align-self: center;
-          margin: 1.5px 0px;
+          margin: 1px 0px 2px 0px;
         }
 
         .card__more > p:hover {
           color: $color-2;
-          border-top: 1.5px solid $color-2;
-          border-bottom: 1.5px solid $color-2;
-          margin: 0px;
+          border-top: 1px solid $color-2;
+          border-bottom: 1px solid $color-2;
+          margin: 0px;  
         }
         
         .card__price-hover {

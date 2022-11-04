@@ -1,4 +1,5 @@
 //Смена регистрации на логин и обратно—————————————————————————————————————————
+
 personalAreaButton = (displaySwitch) => {
 
   const login = document.querySelector('.login').style;
@@ -12,4 +13,5 @@ personalAreaButton = (displaySwitch) => {
     login.display = 'grid';
   }
 }
+
 //——————————————————————————————————————————————————————————————————————————————

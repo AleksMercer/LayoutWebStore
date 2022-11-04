@@ -25,13 +25,15 @@
         <a href="./html/about-us.html">About us</a>
       </nav>
       <nav class="header-icon">
-        <a href="./html/personal-area.html"><img src="./media/icon/person.svg" alt="" class="icon-big-style"></a>
-        <a href="./html/shopping-cart.html"><img src="./media/icon/shopping_cart.svg" alt="" class="icon-big-style"></a>
-        <a href=""><img src="./media/icon/search.svg" alt="" class="icon-big-style"></a>
+        <a href="./html/personal-area.html" target="_blank"><img src="./media/icon/person.svg" alt="" class="icon-big-style"></a>
+        <a href="./html/shopping-cart.html" target="_blank"><img src="./media/icon/shopping_cart.svg" alt="" class="icon-big-style"></a>
+        <a class="search-button"><img src="./media/icon/search.svg" alt="" class="icon-big-style"></a>
       </nav>
+      <input type="search" name="search" placeholder="search something..." id="search-input">
     </header>
 
     <main class="main-home">
+
       <section class="promotion">
         <div class="promotion__info">
           <p>BestGoods_</p>
@@ -43,12 +45,16 @@
           <p>SomePic_</p>
         </div>
       </section>
+
       <aside class="catalog">
         <h1>—[ Catalog ]—</h1>
         <nav class="catalog__block">
           <nav class="catalog__list">
-            <h2>List<img src="./media/icon/arrow_up.svg" alt="˄" class="icon-big-style"></h2>
-            <ul>
+            <a class="open-close-btn">List
+              <img src="./media/icon/arrow_up.svg" alt="˄" class="icon-big-style up" hidden>
+              <img src="./media/icon/arrow_down.svg" alt="˅" class="icon-big-style down">
+            </a>
+            <ul hidden>
               <li>list_element</li>
               <li>list_element</li>
               <li>list_element</li>
@@ -60,12 +66,14 @@
             </ul>
           </nav>
           <nav class="catalog__list">
-            <h2>List<img src="./media/icon/arrow_down.svg" alt="˅" class="icon-big-style"></h2>
-            <ul></ul>
-          </nav>
-          <nav class="catalog__list">
-            <h2>List<img src="./media/icon/arrow_up.svg" alt="˄" class="icon-big-style"></h2>
-            <ul>
+            <a class="open-close-btn">List
+              <img src="./media/icon/arrow_up.svg" alt="˄" class="icon-big-style up" hidden>
+              <img src="./media/icon/arrow_down.svg" alt="˅" class="icon-big-style down">
+            </a>
+            <ul hidden>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
               <li>list_element</li>
               <li>list_element</li>
               <li>list_element</li>
@@ -74,11 +82,72 @@
             </ul>
           </nav>
           <nav class="catalog__list">
-            <h2>List<img src="./media/icon/arrow_down.svg" alt="˅" class="icon-big-style"></h2>
-            <ul></ul>
+            <a class="open-close-btn">List
+              <img src="./media/icon/arrow_up.svg" alt="˄" class="icon-big-style up" hidden>
+              <img src="./media/icon/arrow_down.svg" alt="˅" class="icon-big-style down">
+            </a>
+            <ul hidden>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+            </ul>
+          </nav>
+          <nav class="catalog__list">
+            <a class="open-close-btn">List
+              <img src="./media/icon/arrow_up.svg" alt="˄" class="icon-big-style up" hidden>
+              <img src="./media/icon/arrow_down.svg" alt="˅" class="icon-big-style down">
+            </a>
+            <ul hidden>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+            </ul>
+          </nav>
+          <nav class="catalog__list">
+            <a class="open-close-btn">List
+              <img src="./media/icon/arrow_up.svg" alt="˄" class="icon-big-style up" hidden>
+              <img src="./media/icon/arrow_down.svg" alt="˅" class="icon-big-style down">
+            </a>
+            <ul hidden>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+            </ul>
+          </nav>
+          <nav class="catalog__list">
+            <a class="open-close-btn">List
+              <img src="./media/icon/arrow_up.svg" alt="˄" class="icon-big-style up" hidden>
+              <img src="./media/icon/arrow_down.svg" alt="˅" class="icon-big-style down">
+            </a>
+            <ul hidden>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+              <li>list_element</li>
+            </ul>
           </nav>
         </nav>
       </aside>
+
       <section class="goods">
         <div class="goods__title-filter">
           <button class="catalog-btn"><span>Catalog</span><img src="./media/icon/menu.svg" alt="" class="icon-big-style"></button>
@@ -313,6 +382,7 @@
         </div>
         <button class="goods__load">Load more<img src="./media/icon/arrow_down.svg" alt="" class="icon-big-style"></button>
       </section>
+
     </main>
 
     <footer>
