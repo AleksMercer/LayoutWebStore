@@ -76,6 +76,34 @@
         position: absolute;
         right: 0;
       }
+
+      .filter-form {
+        position: absolute;
+        top: 49px;
+        right: 0;
+        z-index: 50;
+
+        display: none;
+
+        padding: 25px;
+        background-color: rgba(0, 0, 0, 0.85);
+        
+        label {
+          @include grid_template(auto / auto 1fr);
+          column-gap: $desktop-gap;
+          text-align: left;
+          
+          margin-bottom: $desktop-gap;
+        }
+
+        label:last-child {
+          margin-bottom: 0px;
+        }
+      }
+
+      .filter-form.active {
+        display: block;
+      }
     }
 
     &__block {
@@ -203,6 +231,10 @@
 
         .filter-btn {
           position: static;
+        }
+
+        .filter-form {
+          top: 47px;
         }
       }
     }

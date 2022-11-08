@@ -157,11 +157,19 @@
       </aside>
 
       <section class="goods">
+       
         <div class="goods__title-filter">
           <button class="catalog-btn"><span>Catalog</span><img src="./media/icon/menu.svg" alt="" class="icon-big-style"></button>
           <h1>—[ Goods ]—</h1>
           <button class="filter-btn"><span>Filter</span><img src="./media/icon/tune.svg" alt="" class="icon-big-style"></button>
+          <form action="#" class="filter-form">
+            <label><input type="radio" name="Filter-name" value="name-first-last" checked><p>: A — Z</p></label>
+            <label><input type="radio" name="Filter-name" value="name-last-first"><p>: Z — A</p></label>  
+            <label><input type="radio" name="Filter-price" value="price-low-high" checked><p>: $ — $$$</p></label>  
+            <label><input type="radio" name="Filter-price" value="price-high-low"><p>: $$$ — $</p></label>  
+          </form>
         </div>
+        
         <div class="goods__block">
           <div class="card">
             <div class="card__img">
@@ -388,7 +396,9 @@
             </button>
           </div>
         </div>
+        
         <button class="goods__load">Load more<img src="./media/icon/arrow_down.svg" alt="" class="icon-big-style"></button>
+      
       </section>
 
     </main>
