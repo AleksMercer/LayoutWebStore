@@ -11,7 +11,7 @@ body.active {
   grid-area: header;
   @include grid_center(1fr / 0.15fr 1fr 0.15fr);
 
-  padding-bottom: 10px;
+  padding: 0px 10px 10px 10px;
 
   background-color: rgba(0, 0, 0, 0.8);
 
@@ -49,7 +49,7 @@ body.active {
 
   &__icon {
     @include grid_template(auto / repeat(3, 1fr));
-
+    
     a:hover {
       border-left: 1px solid white;
       border-right: 1px solid white;
@@ -183,15 +183,17 @@ body.active {
       .header-burger-btn > p {
         display: none;
       }
-
-      .header-burger-btn:hover {
-        border-left: 1px solid white;
-        border-right: 1px solid white;
-      }
     }
 
     &__icon {
       column-gap: $small-gap;
+      @include grid_template(auto / repeat(3, 1fr));
+      
+      a:hover {
+        border-left: 0px solid white;
+        border-right: 0px solid white;
+      }
+      
     }
 
     &__search-input {

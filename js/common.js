@@ -1,38 +1,9 @@
-/*——Catalog—————————————————————————————————————————————————————————————————————*/
-
-const openCloseBtn = document.querySelectorAll('.open-close-btn');
-
-openCloseBtn.forEach(openClose => {
-
-   openClose.addEventListener('click', e => {
-
-    let arrowUp = e.currentTarget.children[0];
-    let arrowDown = e.currentTarget.children[1];
-    let catalogList = e.currentTarget.nextElementSibling;
-
-    if (arrowUp.hidden == true) {
-      arrowUp.hidden = false;
-      arrowDown.hidden = true;
-      catalogList.hidden = false;
-    } else if (arrowUp.hidden == false) {
-      arrowUp.hidden = true;
-      arrowDown.hidden = false;
-      catalogList.hidden = true;
-    }
-  })
-})
-
-/*——————————————————————————————————————————————————————————————————————————————*/
-
 /*———Search—————————————————————————————————————————————————————————————————————*/
 
 const searchButton = document.querySelector('.search-button');
+const searchInput = document.getElementById('search-input');
 
-searchFunc = (e) => {
-  document.getElementById('search-input').classList.toggle('active');
-}
-
-searchButton.addEventListener('click', searchFunc)
+searchButton.addEventListener('click', () => searchInput.classList.toggle('active'))
 
 /*——————————————————————————————————————————————————————————————————————————————*/
 
@@ -64,22 +35,6 @@ const headerMenuFunc = () => {
 
 headerMenuBtn.addEventListener('click', headerMenuFunc)
 headerBurger.addEventListener('click', headerMenuFunc)
-
-/*——————————————————————————————————————————————————————————————————————————————*/
-
-/*———Goods-filter———————————————————————————————————————————————————————————————*/
-
-const filterButton = document.querySelector('.filter-btn');
-
-filterButton.addEventListener('click', () => {
-  document.querySelector('.filter-form').classList.toggle('active');
-})
-
-/*——————————————————————————————————————————————————————————————————————————————*/
-
-/*———Promotion-gallery——————————————————————————————————————————————————————————*/
-
-
 
 /*——————————————————————————————————————————————————————————————————————————————*/
 
