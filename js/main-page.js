@@ -1,5 +1,44 @@
 /*———Promotion-gallery——————————————————————————————————————————————————————————*/
 
+const img = document.querySelectorAll('.promotion__gallery > img');
+const previous = document.querySelector('.previous');
+const next = document.querySelector('.next');
+
+const lastEl = img.length - 1;
+let count = 0;
+
+const nextFunc = () => {
+  let i = count;
+  count++;
+
+  if (img[lastEl].matches('.active')) {
+    img[lastEl].classList.remove('active');
+    img[0].classList.add('active'); 
+    return count = 0;
+  }
+
+  img[i].classList.remove('active');    //img[i].hidden = true;
+  img[count].classList.add('active');   //img[count].hidden = false;
+}
+
+const previousFunc = () => {
+  let i = count;
+  count--;
+
+  if (img[0].matches('.active')) {
+    img[lastEl].classList.add('active'); 
+    img[0].classList.remove('active');
+    return count = lastEl;
+  }
+
+  img[i].classList.remove('active');    //img[i].hidden = true;
+  img[count].classList.add('active');   //img[count].hidden = false;
+}
+
+next.addEventListener('click', nextFunc)
+previous.addEventListener('click', previousFunc);
+
+setInterval(nextFunc, 4000);
 
 
 /*——————————————————————————————————————————————————————————————————————————————*/
