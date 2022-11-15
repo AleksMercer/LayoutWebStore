@@ -157,7 +157,8 @@
         border-radius: 20px;
         padding: $indent;
         background-color: $color-1;
-        
+        transition: all 0.2s linear 0s;
+
         &__img {
           @include grid_center(auto / 1fr);
           background-color: #0000009a;
@@ -191,7 +192,6 @@
         @include grid_template(repeat(4, auto) / 1fr);
         row-gap: $desktop-gap;
         background-color: #0000009a;
-        transition: all 0.25s linear 0s;
 
         .card__img, .card__price, .card__sub-name {
           display: none;
@@ -311,7 +311,7 @@
         display: none;
       }
 
-      &__pic {
+      &__gallery {
         grid-column: 1 / 3;
       }
     }
