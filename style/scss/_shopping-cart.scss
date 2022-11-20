@@ -68,7 +68,8 @@
       gap: 30px;
 
       &__element {
-        @include grid_template(1fr / auto 1fr repeat(3, auto));
+        @include grid_template(1fr / auto 1fr repeat(2, auto));
+
         align-items: center;
         column-gap: $indent;
 
@@ -80,11 +81,16 @@
 
 
         .counter {
-          @include grid_template(1fr / auto 40px auto);
+          @include grid_template(1fr / auto 40px repeat(2, auto));
+          column-gap: $indent;
 
           input {
             background-color: rgba(0, 0, 0, 0.2);
             text-align: center;
+          }
+
+          &__price {
+            @include grid_self(center, center);
           }
         }
       }
@@ -140,8 +146,7 @@
       gap: $desktop-gap;
 
       &__element {
-        @include grid_template(1fr / 1fr repeat(3, auto));
-
+        @include grid_template(1fr / 1fr repeat(2, auto));
         height: 40px;
         padding: 0px 3px;
         font-size: $M-sml-text-size;
@@ -151,7 +156,16 @@
         }
 
         .counter {
-          @include grid_template(1fr / auto 30px auto);
+          @include grid_template(1fr / auto 30px repeat(2, auto));
+          column-gap: 5px;
+
+          .icon-mid-style {
+            display: none;
+          }
+          
+          .icon-small-style {
+            display: block;
+          }
         }
       }
     }
