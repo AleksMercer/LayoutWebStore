@@ -52,10 +52,11 @@
   }
 
   &__order {
-    @include grid_template(repeat(3, auto) / 1fr);
+    @include grid_template(auto 700px auto / 1fr);
     align-content: start;
     row-gap: $desktop-gap;
     padding: $indent;
+
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 2%;
 
@@ -65,7 +66,11 @@
 
     .order-list {
       @include grid_template(auto / 1fr);
+      align-content: start;
       gap: 30px;
+
+      overflow-y: auto;
+      padding-right: 5px;
 
       &__element {
         @include grid_template(1fr / auto 1fr repeat(2, auto));
@@ -74,11 +79,12 @@
         column-gap: $indent;
 
         padding: 0px 5px;
+
         border: solid black 2px;
         border-radius: 2% / 40%;
+
         height: 35px;
         font-size: $sml-text-size;
-
 
         .counter {
           @include grid_template(1fr / auto 40px repeat(2, auto));
@@ -93,6 +99,29 @@
             @include grid_self(center, center);
           }
         }
+
+        &_name {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+
+      .empty__shopping-cart {
+        display: none;
+      }
+    }
+
+    .empty {
+      align-content: center;
+
+      &__shopping-cart.active {
+        display: block;
+        
+        text-align: center;
+        align-self: center;
+        font-size: 50px;
+        color: rgba(255, 255, 255, 0.75);
       }
     }
 
@@ -118,7 +147,9 @@
 
 @media (max-width: 750px) { // то что происходит до 750px 
 .main-shopping-cart {
-
+  &__order {
+    @include grid_template(auto 490px auto / 1fr);
+  }
 }
 }
 
