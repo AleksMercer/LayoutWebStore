@@ -157,7 +157,7 @@
         border-radius: 20px;
         padding: $indent;
         background-color: $color-1;
-        transition: all 0.2s linear 0s;
+        transition: all .2s linear 0s;
 
         &__img {
           @include grid_center(auto / 1fr);

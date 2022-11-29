@@ -1029,6 +1029,9 @@ body.active {
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
 }
+.main-shopping-cart__order .order-list__element_name:hover {
+  color: aquamarine;
+}
 .main-shopping-cart__order .order-list .empty__shopping-cart {
   display: none;
 }

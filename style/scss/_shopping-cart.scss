@@ -105,6 +105,10 @@
           white-space: nowrap;
           text-overflow: ellipsis;
         }
+
+        &_name:hover {
+          color: $color-2;
+        }
       }
 
       .empty__shopping-cart {

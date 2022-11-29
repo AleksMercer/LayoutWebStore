@@ -12,9 +12,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap">
 
   <script src="./../js/common.js" defer></script>
-  <script src="./../js/shopping-cart.js" defer></script>
 
-  <title>Shopping cart</title>
+  <title>Product page</title>
 </head>
 
 <body>
@@ -45,47 +44,21 @@
       </nav>
     </header>
 
-    <main class="main-shopping-cart">
-
-      <section class="main-shopping-cart__forms">
-        <h2>Form_</h2>
-        <form action="#" method="post" enctype="multipart/form-data" class="forms__fields">
-          <p>Full name:</p><input type="text" name="full-name" placeholder="John Doe A." required>
-          <p>Phone number:</p><input type="tel" name="phone-number" maxlength="18" placeholder="+0 (123) 456-78-91" required>
-          <p>E-mail:</p><input type="email" name="e-mail" placeholder="web-store@some.com" required>
-          <p>Payment method:</p>
-            <select name="payment-method" required>         
-              <option>Cash</option> 
-              <option>Bank card</option> 
-            </select>
-          <p>Address:</p><input type="text" name="address" placeholder="house, street, apartment, city, country">
-          <p>Goods receipt:</p>
-            <select name="delivery" required>         
-              <option>Delivery</option> 
-              <option>Self-delivery</option> 
-            </select>
-          <div class="form-button">
-            <button type="reset">Reset</button>
-            <button type="submit">Submit</button>
-          </div>
-        </form>
-      </section>
-
-      <section class="main-shopping-cart__order">
-        <h2>Order_</h2>
-        <div class="order-list">
-          
-          <!-- Пустая корзина -->
-          <div class="empty__shopping-cart">
-            Your shopping cart is empty
-          </div>
-          <!-- Пустая корзина -->
-        </div>
-        <div class="total">
-          <p>Total price: <span>0</span> $</p>
-        </div>
-      </section>
+    <main class="main-product">
       
+      <section class="goods">
+        <div class="goods__path-return">
+          <h2>Goods / product_9</h2>
+          <a href="./../index.html" class="return-btn"><span>Return</span><img src="./../media/icon/return.svg" alt="" class="icon-big-style"></a>
+        </div>
+        <div class="goods__block">
+          <div class="goods__pic"><p>Picture_</p></div>
+          <div class="goods__info"><p>Information_</p></div>
+          <div class="goods__specification"><p>Specification_</p></div>
+          <div class="goods__description"><p>Description_</p></div>
+        </div>
+      </section>
+
     </main>
 
     <footer>

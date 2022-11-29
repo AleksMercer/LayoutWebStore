@@ -92,3 +92,33 @@ filterBtn.addEventListener('click', (e) => {
 })
 
 /*——————————————————————————————————————————————————————————————————————————————*/
+
+
+
+/*———Local-storage-cart—————————————————————————————————————————————————————————*/
+
+const addToCartBtn = document.querySelectorAll('.card__price-hover');
+
+let goodsArray = [];
+
+addToCartBtn.forEach(addToCart => {
+  
+  addToCart.addEventListener('click', e => {
+
+    const name = e.currentTarget.parentElement.children[1].children[0].textContent;
+    const price = e.currentTarget.children[1].children[1].textContent;
+    const href = e.currentTarget.parentElement.children[4].getAttribute('href');
+
+    const good = {
+      id: Date.now(),
+      name: name,
+      price: price,
+      href: href
+    };
+    
+    goodsArray.push(good);
+    localStorage.setItem('goodsArray', JSON.stringify(goodsArray));
+ })
+})
+
+/*——————————————————————————————————————————————————————————————————————————————*/
