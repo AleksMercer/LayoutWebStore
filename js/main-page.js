@@ -40,14 +40,13 @@ previous.addEventListener('click', previousFunc);
 
 setInterval(nextFunc, 4000);
 
-
 /*——————————————————————————————————————————————————————————————————————————————*/
 
 
 
 /*——Catalog—————————————————————————————————————————————————————————————————————*/
 
-//Открытие/закрытие каталога на <1100px
+//Open/close catalog on <1100px
 const catalogBlock = document.querySelector('aside.catalog');
 const catalogBtn = document.querySelector('button.catalog-btn');
 
@@ -55,7 +54,7 @@ catalogBtn.addEventListener('click', (e) => {
   catalogBlock.classList.toggle('active');
 })
 
-//Откртыие/закрытие списков внутри каталога
+//Open/close list inside catalog
 const openCloseBtn = document.querySelectorAll('.open-close-btn');
 
 openCloseBtn.forEach(openClose => {
@@ -105,20 +104,38 @@ addToCartBtn.forEach(addToCart => {
   
   addToCart.addEventListener('click', e => {
 
+    const localItems = JSON.parse(localStorage.getItem('goodsArray'));
+
     const name = e.currentTarget.parentElement.children[1].children[0].textContent;
     const price = e.currentTarget.children[1].children[1].textContent;
     const href = e.currentTarget.parentElement.children[4].getAttribute('href');
+
+    let quantity = 1;
+
+    /*if (localItems !== null) {
+
+      for(let i = 0; i < localItems.length; i++) {
+
+        if (localItems[i].name == name && localItems[i].price == price && localItems[i].href == href) {
+          localItems[i].quantity
+          //здесь должно быть условие , которое при true запихнет в локал сторэдж новое кол -во товару
+          //например можно сделать как в удалении, те переделать конкретный элемент
+        };
+      } 
+    }*/
 
     const good = {
       id: Date.now(),
       name: name,
       price: price,
-      href: href
+      href: href,
+      quantity: quantity
     };
     
     goodsArray.push(good);
     localStorage.setItem('goodsArray', JSON.stringify(goodsArray));
- })
+    redIndicator();
+  })
 })
 
 /*——————————————————————————————————————————————————————————————————————————————*/

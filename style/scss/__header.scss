@@ -50,6 +50,23 @@ body.active {
   &__icon {
     @include grid_template(auto / repeat(3, 1fr));
     
+    .shoping-cart-icon {
+      position: relative;
+    }
+
+    .active > span {
+      position: absolute;
+      top: 0;
+      right: 15%;
+      z-index: 100;
+
+      width: 15px;
+      height: 15px;
+
+      background-color: rgba(255, 0, 0, 0.8);
+      border-radius: 100%;
+    }
+
     a:hover {
       border-left: 1px solid white;
       border-right: 1px solid white;
@@ -154,6 +171,13 @@ body.active {
     &__icon {
       justify-self: end;
       column-gap: $desktop-gap;
+
+      .active > span {
+        right: 0;
+  
+        width: 13px;
+        height: 13px;
+      }
     }
 
     &__search-input {

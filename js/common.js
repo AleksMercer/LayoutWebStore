@@ -38,3 +38,24 @@ headerBurger.addEventListener('click', headerMenuFunc)
 
 /*——————————————————————————————————————————————————————————————————————————————*/
 
+
+
+/*———red indicator above the shopping cart icon ————————————————————————————————*/
+
+const shopingCartIcon = document.querySelector('.shoping-cart-icon') 
+
+redIndicator = () => {
+  let goodsArr = JSON.parse(localStorage.getItem('goodsArray'));
+
+  if (goodsArr !== null) {
+    if (goodsArr.length > 0) {
+      shopingCartIcon.classList.add('active');
+    } else if (goodsArr.length == 0) {
+      shopingCartIcon.classList.remove('active');
+    }
+  }
+}
+
+redIndicator();
+
+/*——————————————————————————————————————————————————————————————————————————————*/

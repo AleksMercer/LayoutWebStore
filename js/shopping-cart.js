@@ -11,6 +11,7 @@ if (localItems !== null) {
     let name = localItems[i].name;
     let price = localItems[i].price;
     let href = localItems[i].href;
+    let quantity = localItems[i].quantity;
 
     let newOrderElement = `
       <div class="order-list__element">
@@ -18,7 +19,7 @@ if (localItems !== null) {
         <a href="./.${href}" class="order-list__element_name" target="_blank">${name}</a>
         <div class="counter">
           <a class="minus"><img src="./../media/icon/minus.svg" alt="-" class="icon-mid-style icon-small-style minus"></a>
-          <input type="text" value="1" disabled>
+          <input type="text" value="${quantity}" disabled>
           <a class="plus"><img src="./../media/icon/plus.svg" alt="+" class="icon-mid-style icon-small-style plus"></a>
         <div class="counter__price"><span>${price}</span> $</div>
         </div>
@@ -35,7 +36,6 @@ if (localItems !== null) {
 
 /*———Goods number & Empty shopping-cart—————————————————————————————————————————*/
 
-//const orderList
 const emptyText = document.querySelector('.empty__shopping-cart');
 
 numberOfGoods = () => {
@@ -117,7 +117,6 @@ orderListElement.forEach(counter => {
 
 /*———Remove goods from order————————————————————————————————————————————————————*/
 
-//const localItems
 const deleteButton = document.querySelectorAll('.order-list__element_delete > img');
 
 
@@ -137,8 +136,7 @@ deleteButton.forEach(deleteBtn => {
     localStorage.setItem('goodsArray', JSON.stringify(localItems));
     
     e.path[2].remove();
-    numberOfGoods();
-    totalCalc();
+    numberOfGoods();  totalCalc();  redIndicator();
   })
 })
 

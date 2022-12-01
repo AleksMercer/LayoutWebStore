@@ -234,6 +234,19 @@ body.active {
   display: grid;
   grid-template: auto/repeat(3, 1fr);
 }
+.header__icon .shoping-cart-icon {
+  position: relative;
+}
+.header__icon .active > span {
+  position: absolute;
+  top: 0;
+  right: 15%;
+  z-index: 100;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(255, 0, 0, 0.8);
+  border-radius: 100%;
+}
 .header__icon a:hover {
   border-left: 1px solid white;
   border-right: 1px solid white;
@@ -337,6 +350,11 @@ body.active {
     -webkit-column-gap: 15px;
        -moz-column-gap: 15px;
             column-gap: 15px;
+  }
+  .header__icon .active > span {
+    right: 0;
+    width: 13px;
+    height: 13px;
   }
   .header__search-input {
     top: 75px;
@@ -792,7 +810,7 @@ body.active {
   .main-home .goods__block .card__price {
     justify-self: center;
   }
-  .main-home .goods__block .card__price p > span {
+  .main-home .goods__block .card__price p > .span-price {
     display: none;
   }
   .main-home .goods__block .card:hover {
@@ -806,7 +824,7 @@ body.active {
   .main-home .goods__block .card:hover .card__more {
     font-size: 20px;
   }
-  .main-home .goods__block .card:hover .card__price-hover p > span {
+  .main-home .goods__block .card:hover .card__price-hover p > .span-price {
     display: none;
   }
 }
