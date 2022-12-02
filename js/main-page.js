@@ -119,6 +119,7 @@ addToCartBtn.forEach(addToCart => {
         if (localItems[i].name == name && localItems[i].price == price && localItems[i].href == href) {
           localItems[i].quantity = ++localItems[i].quantity;
           localStorage.setItem('goodsArray', JSON.stringify(localItems));
+          goodsArray = localItems;
           return
         }
       } 
