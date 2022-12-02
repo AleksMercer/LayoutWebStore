@@ -91,11 +91,22 @@ orderListElement.forEach(counter => {
   const counterBlock = counter.children[2];
   const price = counterBlock.children[3].firstChild.innerHTML;
 
+  currentPrice = () => {
+    const price = counterBlock.children[3].firstChild;
+    const value = counterBlock.children[1].value;
+
+    if (value > 1) {
+      price.innerHTML = `${value * price.innerHTML}`;
+    }
+  }
+
+  currentPrice(); totalCalc();
+  
   counterBlock.addEventListener('click', e => {
 
     const input = e.currentTarget.children[1];
     const priceBlock = e.currentTarget.children[3].firstChild;
-
+    
     if (e.target.matches('.minus')) {
       if (input.value == 1) return; 
       input.value--;

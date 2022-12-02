@@ -112,17 +112,17 @@ addToCartBtn.forEach(addToCart => {
 
     let quantity = 1;
 
-    /*if (localItems !== null) {
+    if (localItems !== null) {
 
       for(let i = 0; i < localItems.length; i++) {
 
         if (localItems[i].name == name && localItems[i].price == price && localItems[i].href == href) {
-          localItems[i].quantity
-          //здесь должно быть условие , которое при true запихнет в локал сторэдж новое кол -во товару
-          //например можно сделать как в удалении, те переделать конкретный элемент
-        };
+          localItems[i].quantity = ++localItems[i].quantity;
+          localStorage.setItem('goodsArray', JSON.stringify(localItems));
+          return
+        }
       } 
-    }*/
+    }
 
     const good = {
       id: Date.now(),
