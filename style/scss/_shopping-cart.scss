@@ -87,7 +87,7 @@
         font-size: $sml-text-size;
 
         .counter {
-          @include grid_template(1fr / auto 40px repeat(2, auto));
+          @include grid_template(1fr / auto 40px auto minmax(75px, auto));
           column-gap: $indent;
 
           input {
@@ -191,7 +191,7 @@
         }
 
         .counter {
-          @include grid_template(1fr / auto 30px repeat(2, auto));
+          @include grid_template(1fr / auto 30px auto minmax(60px, auto));
           column-gap: 5px;
 
           .icon-mid-style {

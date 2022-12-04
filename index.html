@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap">
 
   <script src="./js/common.js" defer></script>
-  <script src="./js/main-page.js" defer></script>
+  <script src="./js/main-page.js" type="module" defer></script>
 
   <title>Layout Web-store</title>
 </head>
@@ -22,6 +22,7 @@
   <div class="wrapper">
 
     <header class="header">
+
       <a href="./index.html" class="logo">Logo</a>
       <nav class="header__menu">
         <button class="header-burger-btn"><img src="./media/icon/menu.svg" alt="" class="icon-big-style active"><p>Menu</p></button>
@@ -34,7 +35,19 @@
         <a href="./html/shopping-cart.html" class="shoping-cart-icon" target="_blank"><span></span><img src="./media/icon/shopping_cart.svg" alt="" class="icon-big-style"></a>
         <a class="search-button"><img src="./media/icon/search.svg" alt="" class="icon-big-style"></a>
       </nav>
-      <input class="header__search-input" type="search" name="search" placeholder="search something..." id="search-input">
+      <nav class="search-block active">
+        <input class="search-block__input" type="text" name="search" placeholder="search something..." id="search-input">
+        <div class="search-block__found-goods">
+          <!-- found products will be here -->
+          <!-- <a href="#" class="search-card">
+            <div class="search-card__img">
+              <p>Pic</p>
+            </div>
+            <div class="search-card__name">Goods_name_1</div>
+            <div class="search-card__price">1000<span> $</span></div>
+          </a> -->
+        </div>
+      </nav>
       <nav class="header__menu-block">
         <nav class="menu-block-link">
           <a href="#">menu_el_4</a>
@@ -43,6 +56,7 @@
           <a href="#">menu_el_7</a>
         </nav>
       </nav>
+
     </header>
 
     <main class="main-home">
@@ -179,302 +193,15 @@
           <h1>—[ Goods ]—</h1>
           <button class="filter-btn"><span>Filter</span><img src="./media/icon/tune.svg" alt="" class="icon-big-style"></button>
           <form action="#" class="filter-form">
-            <label><input type="radio" name="Filter-name" value="name-first-last" checked><p>: A — Z</p></label>
-            <label><input type="radio" name="Filter-name" value="name-last-first"><p>: Z — A</p></label>  
-            <label><input type="radio" name="Filter-price" value="price-low-high" checked><p>: $ — $$$</p></label>  
-            <label><input type="radio" name="Filter-price" value="price-high-low"><p>: $$$ — $</p></label>  
+            <label><input type="radio" name="Filter" value="name-first-last" checked><p>: A — Z</p></label>
+            <label><input type="radio" name="Filter" value="name-last-first"><p>: Z — A</p></label>  
+            <label><input type="radio" name="Filter" value="price-low-high"><p>: $ — $$$</p></label>  
+            <label><input type="radio" name="Filter" value="price-high-low"><p>: $$$ — $</p></label>  
           </form>
         </div>
         
         <div class="goods__block">
-          <div class="card">
-            <div class="card__img">
-              <p>Goods_pic<span>_png</span></p>
-            </div>
-            <div class="card__main-name">
-              <p>Goods_name-1</p>
-            </div>
-            <div class="card__sub-name">
-              <p>Goods_sub-name</p>
-            </div>
-            <div class="card__description">
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-            </div>
-            <a href="./html-products/product_1.html" class="card__more" target="_blank">
-              <p>more_info</p>
-            </a>
-            <button class="card__price card__price-hover">
-              <img src="./media/icon/add_shopping_cart.svg" alt="" class="icon-mid-style">
-              <p><span class="span-price">Price:</span> <span>1000</span> $</p>
-            </button>
-          </div>
-          <div class="card">
-            <div class="card__img">
-              <p>Goods_pic<span>_png</span></p>
-            </div>
-            <div class="card__main-name">
-              <p>Goods_name-2</p>
-            </div>
-            <div class="card__sub-name">
-              <p>Goods_sub-name</p>
-            </div>
-            <div class="card__description">
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-            </div>
-            <a href="./html-products/product_2.html" class="card__more" target="_blank">
-              <p>more_info</p>
-            </a>
-            <button class="card__price card__price-hover">
-              <img src="./media/icon/add_shopping_cart.svg" alt="" class="icon-mid-style">
-              <p><span class="span-price">Price:</span> <span>2000</span> $</p>
-            </button>
-          </div>
-          <div class="card">
-            <div class="card__img">
-              <p>Goods_pic<span>_png</span></p>
-            </div>
-            <div class="card__main-name">
-              <p>Goods_name-3</p>
-            </div>
-            <div class="card__sub-name">
-              <p>Goods_sub-name</p>
-            </div>
-            <div class="card__description">
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-            </div>
-            <a href="./html-products/product_3.html" class="card__more" target="_blank">
-              <p>more_info</p>
-            </a>
-            <button class="card__price card__price-hover">
-              <img src="./media/icon/add_shopping_cart.svg" alt="" class="icon-mid-style">
-              <p><span class="span-price">Price:</span> <span>3000</span> $</p>
-            </button>
-          </div>
-          <div class="card">
-            <div class="card__img">
-              <p>Goods_pic<span>_png</span></p>
-            </div>
-            <div class="card__main-name">
-              <p>Goods_name-4</p>
-            </div>
-            <div class="card__sub-name">
-              <p>Goods_sub-name</p>
-            </div>
-            <div class="card__description">
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-            </div>
-            <a href="./html-products/product_4.html" class="card__more" target="_blank">
-              <p>more_info</p>
-            </a>
-            <button class="card__price card__price-hover">
-              <img src="./media/icon/add_shopping_cart.svg" alt="" class="icon-mid-style">
-              <p><span class="span-price">Price:</span> <span>4000</span> $</p>
-            </button>
-          </div>
-          <div class="card">
-            <div class="card__img">
-              <p>Goods_pic<span>_png</span></p>
-            </div>
-            <div class="card__main-name">
-              <p>Goods_name-5</p>
-            </div>
-            <div class="card__sub-name">
-              <p>Goods_sub-name</p>
-            </div>
-            <div class="card__description">
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-            </div>
-            <a href="./html-products/product_5.html" class="card__more" target="_blank">
-              <p>more_info</p>
-            </a>
-            <button class="card__price card__price-hover">
-              <img src="./media/icon/add_shopping_cart.svg" alt="" class="icon-mid-style">
-              <p><span class="span-price">Price:</span> <span>5000</span> $</p>
-            </button>
-          </div>
-          <div class="card">
-            <div class="card__img">
-              <p>Goods_pic<span>_png</span></p>
-            </div>
-            <div class="card__main-name">
-              <p>Goods_name-6</p>
-            </div>
-            <div class="card__sub-name">
-              <p>Goods_sub-name</p>
-            </div>
-            <div class="card__description">
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-            </div>
-            <a href="./html-products/product_6.html" class="card__more" target="_blank">
-              <p>more_info</p>
-            </a>
-            <button class="card__price card__price-hover">
-              <img src="./media/icon/add_shopping_cart.svg" alt="" class="icon-mid-style">
-              <p><span class="span-price">Price:</span> <span>6000</span> $</p>
-            </button>
-          </div>
-          <div class="card">
-            <div class="card__img">
-              <p>Goods_pic<span>_png</span></p>
-            </div>
-            <div class="card__main-name">
-              <p>Goods_name-7</p>
-            </div>
-            <div class="card__sub-name">
-              <p>Goods_sub-name</p>
-            </div>
-            <div class="card__description">
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-            </div>
-            <a href="./html-products/product_7.html" class="card__more" target="_blank">
-              <p>more_info</p>
-            </a>
-            <button class="card__price card__price-hover">
-              <img src="./media/icon/add_shopping_cart.svg" alt="" class="icon-mid-style">
-              <p><span class="span-price">Price:</span> <span>7000</span> $</p>
-            </button>
-          </div>
-          <div class="card">
-            <div class="card__img">
-              <p>Goods_pic<span>_png</span></p>
-            </div>
-            <div class="card__main-name">
-              <p>Goods_name-8</p>
-            </div>
-            <div class="card__sub-name">
-              <p>Goods_sub-name</p>
-            </div>
-            <div class="card__description">
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-            </div>
-            <a href="./html-products/product_8.html" class="card__more" target="_blank">
-              <p>more_info</p>
-            </a>
-            <button class="card__price card__price-hover">
-              <img src="./media/icon/add_shopping_cart.svg" alt="" class="icon-mid-style">
-              <p><span class="span-price">Price:</span> <span>8000</span> $</p>
-            </button>
-          </div>
-          <div class="card">
-            <div class="card__img">
-              <p>Goods_pic<span>_png</span></p>
-            </div>
-            <div class="card__main-name">
-              <p>Goods_name-9</p>
-            </div>
-            <div class="card__sub-name">
-              <p>Goods_sub-name</p>
-            </div>
-            <div class="card__description">
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-            </div>
-            <a href="./html-products/product_9.html" class="card__more" target="_blank">
-              <p>more_info</p>
-            </a>
-            <button class="card__price card__price-hover">
-              <img src="./media/icon/add_shopping_cart.svg" alt="" class="icon-mid-style">
-              <p><span class="span-price">Price:</span> <span>9000</span> $</p>
-            </button>
-          </div>
-          <div class="card">
-            <div class="card__img">
-              <p>Goods_pic<span>_png</span></p>
-            </div>
-            <div class="card__main-name">
-              <p>Goods_name-10</p>
-            </div>
-            <div class="card__sub-name">
-              <p>Goods_sub-name</p>
-            </div>
-            <div class="card__description">
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-            </div>
-            <a href="./html-products/product_10.html" class="card__more" target="_blank">
-              <p>more_info</p>
-            </a>
-            <button class="card__price card__price-hover">
-              <img src="./media/icon/add_shopping_cart.svg" alt="" class="icon-mid-style">
-              <p><span class="span-price">Price:</span> <span>10000</span> $</p>
-            </button>
-          </div>
-          <div class="card">
-            <div class="card__img">
-              <p>Goods_pic<span>_png</span></p>
-            </div>
-            <div class="card__main-name">
-              <p>Goods_name-11</p>
-            </div>
-            <div class="card__sub-name">
-              <p>Goods_sub-name</p>
-            </div>
-            <div class="card__description">
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-            </div>
-            <a href="./html-products/product_11.html" class="card__more" target="_blank">
-              <p>more_info</p>
-            </a>
-            <button class="card__price card__price-hover">
-              <img src="./media/icon/add_shopping_cart.svg" alt="" class="icon-mid-style">
-              <p><span class="span-price">Price:</span> <span>11000</span> $</p>
-            </button>
-          </div>
-          <div class="card">
-            <div class="card__img">
-              <p>Goods_pic<span>_png</span></p>
-            </div>
-            <div class="card__main-name">
-              <p>Goods_name-12</p>
-            </div>
-            <div class="card__sub-name">
-              <p>Goods_sub-name</p>
-            </div>
-            <div class="card__description">
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-              <p>Some description of the product, characteristics or other information.</p>
-            </div>
-            <a href="./html-products/product_12.html" class="card__more" target="_blank">
-              <p>more_info</p>
-            </a>
-            <button class="card__price card__price-hover">
-              <img src="./media/icon/add_shopping_cart.svg" alt="" class="icon-mid-style">
-              <p><span class="span-price">Price:</span> <span>12000</span> $</p>
-            </button>
-          </div>
+          <!-- here will be goods from JSON file -->
         </div>
             
       </section>

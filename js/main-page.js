@@ -1,3 +1,52 @@
+/*———Import goods from JSON-file———————————————————————————————————————————————————————————————————————————*/
+
+import JSONproducts from './../json/products.json' assert {type: 'json'};
+
+const goodsBlock = document.querySelector('.goods__block');
+const productsArray = JSONproducts.products;
+  
+if (productsArray.length > 0) {
+
+  for(let i = 0; i < productsArray.length; i++) {
+
+    let name = productsArray[i].name;
+    let url = productsArray[i].url;
+    let price = productsArray[i].price;
+
+    let newGoodsElement = `
+      <div class="card">
+        <div class="card__img">
+          <p>Goods_pic<span>_png</span></p>
+        </div>
+        <div class="card__main-name">
+          <p>${name}</p>
+        </div>
+        <div class="card__sub-name">
+          <p>Goods_sub-name</p>
+        </div>
+        <div class="card__description">
+          <p>Some description of the product, characteristics or other information.</p>
+          <p>Some description of the product, characteristics or other information.</p>
+          <p>Some description of the product, characteristics or other information.</p>
+          <p>Some description of the product, characteristics or other information.</p>
+        </div>
+        <a href="${url}" class="card__more" target="_blank">
+          <p>more_info</p>
+        </a>
+        <button class="card__price card__price-hover">
+          <img src="./media/icon/add_shopping_cart.svg" alt="" class="icon-mid-style">
+          <p><span class="span-price">Price:</span> <span>${price}</span> $</p>
+        </button>
+      </div>
+    `
+    goodsBlock.insertAdjacentHTML('beforeend', newGoodsElement);
+  }
+}
+
+/*——————————————————————————————————————————————————————————————————————————————*/
+
+
+
 /*———Promotion-gallery——————————————————————————————————————————————————————————*/
 
 const img = document.querySelectorAll('.promotion__gallery > img');

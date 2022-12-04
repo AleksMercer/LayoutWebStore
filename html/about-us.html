@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./../style/css/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap">
 
-  <script src="./../js/common.js" defer></script>
+  <script src="./../js/common.js" type="module" defer></script>
 
   <title>About us</title>
 </head>
@@ -33,7 +33,12 @@
         <a href="./shopping-cart.html" class="shoping-cart-icon" target="_blank"><span></span><img src="./../media/icon/shopping_cart.svg" alt="" class="icon-big-style"></a>
         <a class="search-button"><img src="./../media/icon/search.svg" alt="" class="icon-big-style"></a>
       </nav>
-      <input class="header__search-input" type="search" name="search" placeholder="search something..." id="search-input">
+      <nav class="search-block">
+        <input class="search-block__input" type="text" name="search" placeholder="search something..." id="search-input">
+        <div class="search-block__found-goods">
+          <!-- found products will be here -->
+        </div>
+      </nav>
       <nav class="header__menu-block">
         <nav class="menu-block-link">
           <a href="#">menu_el_4</a>
