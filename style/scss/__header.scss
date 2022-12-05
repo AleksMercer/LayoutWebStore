@@ -79,7 +79,8 @@ body.active {
     right: 10px;
     z-index: 50;
 
-    @include grid_template(repeat(2, auto) / 1fr);
+    display: none;
+    grid-template: repeat(2, auto) / 1fr;
 
     width: 50%;
     
@@ -93,14 +94,14 @@ body.active {
       border-bottom: 1px solid white;
     }
 
-    &__found-goods { //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      @include grid_template(minmax(90px, 205px) / 1fr);
+    &__found-goods {
+      @include grid_template(auto / 1fr);
       align-content: start;
       row-gap: $indent;
 
       overflow-y: auto;
 
-      //height: 205px;
+      max-height: 205px;
       width: 100%;
       background-color: rgba(0, 0, 0, 0.85);
 
@@ -140,7 +141,7 @@ body.active {
   }
 
   .search-block.active {
-    display: none;
+    display: grid;
   }
 
   &__menu-block {
@@ -261,12 +262,12 @@ body.active {
       
     }
 
-    /*.search-block {    
+    .search-block {
       top: 60px;
       left: 0px;
 
-      width: 96%;
-      margin: 0px 2%;
+      width: 97%;
+      margin: 0px 1.5%;
 
       &__found-goods {
         .search-card {
@@ -276,7 +277,7 @@ body.active {
           }
         }
       }
-    }*/
+    }
 
     &__menu-block {
       top: 55px;

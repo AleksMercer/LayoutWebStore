@@ -1,12 +1,3 @@
-/*———Search—————————————————————————————————————————————————————————————————————*/
-
-const searchButton = document.querySelector('.search-button');
-const searchInput = document.getElementById('search-input');
-
-searchButton.addEventListener('click', () => searchInput.classList.toggle('active'))
-
-/*——————————————————————————————————————————————————————————————————————————————*/
-
 /*———Header-menu————————————————————————————————————————————————————————————————*/
 
 const headerMenu = document.querySelector('.header__menu');

@@ -52,7 +52,7 @@
   }
 
   &__order {
-    @include grid_template(auto 700px auto / 1fr);
+    @include grid_template(auto / 1fr);
     align-content: start;
     row-gap: $desktop-gap;
     padding: $indent;
@@ -70,6 +70,8 @@
       gap: 30px;
 
       overflow-y: auto;
+
+      max-height: 700px;
       padding-right: 5px;
 
       &__element {
@@ -117,6 +119,7 @@
     }
 
     .empty {
+      height: 60vh;
       align-content: center;
 
       &__shopping-cart.active {
@@ -124,13 +127,15 @@
         
         text-align: center;
         align-self: center;
+
         font-size: 50px;
         color: rgba(255, 255, 255, 0.75);
       }
     }
 
     .total {
-      @include grid_template(1fr / 1fr);
+      //display: grid;
+      grid-template: 1fr / 1fr;
       justify-items: end;
       font-size: $mid-text-size;
     }
@@ -153,6 +158,14 @@
 .main-shopping-cart {
   &__order {
     @include grid_template(auto 490px auto / 1fr);
+
+    .empty {
+      height: 100%;
+
+      &__shopping-cart.active {
+        font-size: 40px;
+      }
+    }
   }
 }
 }

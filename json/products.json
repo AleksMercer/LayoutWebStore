@@ -1,62 +1,62 @@
 {
   "products": [
     {
-      "name": "Goods_name-1",
+      "name": "12-Goods_name",
       "url": "./html-products/product_1.html",
       "price": 1000    
     },
     {
-      "name": "Goods_name-2",
+      "name": "34-Goods_name",
       "url": "./html-products/product_2.html",
       "price": 2000    
     },
     {
-      "name": "Goods_name-3",
+      "name": "56-Goods_name",
       "url": "./html-products/product_3.html",
       "price": 3000    
     },
     {
-      "name": "Goods_name-4",
+      "name": "78-Goods_name",
       "url": "./html-products/product_4.html",
       "price": 4000    
     },
     {
-      "name": "Goods_name-5",
+      "name": "910-Goods_name",
       "url": "./html-products/product_5.html",
       "price": 5000    
     },
     {
-      "name": "Goods_name-6",
+      "name": "1112-Goods_name",
       "url": "./html-products/product_6.html",
       "price": 6000    
     },
     {
-      "name": "Goods_name-7",
+      "name": "1314-Goods_name",
       "url": "./html-products/product_7.html",
       "price": 7000    
     },
     {
-      "name": "Goods_name-8",
+      "name": "1516-Goods_name",
       "url": "./html-products/product_8.html",
       "price": 8000    
     },
     {
-      "name": "Goods_name-9",
+      "name": "1718-Goods_name",
       "url": "./html-products/product_9.html",
       "price": 9000    
     },
     {
-      "name": "Goods_name-10",
+      "name": "1920-Goods_name",
       "url": "./html-products/product_10.html",
       "price": 10000    
     },
     {
-      "name": "Goods_name-11",
+      "name": "2122Goods_name",
       "url": "./html-products/product_11.html",
       "price": 11000    
     },
     {
-      "name": "Goods_name-12",
+      "name": "2324-Goods_name",
       "url": "./html-products/product_12.html",
       "price": 12000    
     }

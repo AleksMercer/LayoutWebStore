@@ -37,6 +37,7 @@ if (localItems !== null) {
 /*———Goods number & Empty shopping-cart—————————————————————————————————————————*/
 
 const emptyText = document.querySelector('.empty__shopping-cart');
+const totalDiv = document.querySelector('.total');
 
 numberOfGoods = () => {
 
@@ -49,9 +50,12 @@ numberOfGoods = () => {
   if (goodsNumber.length == 0) {
     emptyText.classList.add('active');
     orderList.classList.add('empty');
+    totalDiv.style.display = 'none';
+    
   } else if (goodsNumber.length !== 0) {
     orderList.classList.remove('empty');
     emptyText.classList.remove('active');
+    totalDiv.style.display = 'grid';
   }
 } 
 
