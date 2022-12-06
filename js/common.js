@@ -30,17 +30,25 @@ headerBurger.addEventListener('click', headerMenuFunc)
 /*——————————————————————————————————————————————————————————————————————————————*/
 
 
+//---Array for local storage
+let goodsArray = [];
+//--------------------------
+
 
 /*———red indicator above the shopping cart icon ————————————————————————————————*/
 
-const shopingCartIcon = document.querySelector('.shoping-cart-icon') 
+const shopingCartIcon = document.querySelector('.shoping-cart-icon'); 
+const shopingCartIconSpan = document.querySelector('.shoping-cart-icon > span');
 
 redIndicator = () => {
+  
   let goodsArr = JSON.parse(localStorage.getItem('goodsArray'));
 
   if (goodsArr !== null) {
+
     if (goodsArr.length > 0) {
       shopingCartIcon.classList.add('active');
+      shopingCartIconSpan.innerHTML = `${goodsArr.length}`;
     } else if (goodsArr.length == 0) {
       shopingCartIcon.classList.remove('active');
     }

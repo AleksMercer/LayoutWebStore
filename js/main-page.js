@@ -147,7 +147,7 @@ filterBtn.addEventListener('click', (e) => {
 
 const addToCartBtn = document.querySelectorAll('.card__price-hover');
 
-let goodsArray = [];
+//let goodsArray = []; - common.js
 
 addToCartBtn.forEach(addToCart => {
   
@@ -163,12 +163,14 @@ addToCartBtn.forEach(addToCart => {
 
     if (localItems !== null) {
 
+      goodsArray = localItems;
+      
       for(let i = 0; i < localItems.length; i++) {
 
         if (localItems[i].name == name && localItems[i].price == price && localItems[i].href == href) {
+
           localItems[i].quantity = ++localItems[i].quantity;
           localStorage.setItem('goodsArray', JSON.stringify(localItems));
-          goodsArray = localItems;
           return
         }
       } 
