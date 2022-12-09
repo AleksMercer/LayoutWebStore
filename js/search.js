@@ -41,7 +41,7 @@ searchInput.addEventListener('keyup', () => {
           <a href="${url}" class="search-card__name">${name}</a>
           <div class="search-card__price"><span>${price}</span> $</div>
           <button class="search-card__button">
-            <img src="./../media/icon/add_shopping_cart.svg" alt="./media/icon/add_shopping_cart.svg" class="icon-big-style">
+            <img src="./../media/icon/add_shopping_cart.svg" onerror="this.src='./../media/icon/add_shopping_cart.svg';"  class="icon-big-style">
           </button>
         </div>
       `;
