@@ -41,15 +41,16 @@ searchInput.addEventListener('keyup', () => {
           <a href="${url}" class="search-card__name">${name}</a>
           <div class="search-card__price"><span>${price}</span> $</div>
           <button class="search-card__button">
-            <img src="./../media/icon/add_shopping_cart.svg" alt="#" class="icon-big-style">
+            <img src="./../media/icon/add_shopping_cart.svg" alt="./media/icon/add_shopping_cart.svg" class="icon-big-style">
           </button>
         </div>
-      `
+      `;
+
       foundGoods.insertAdjacentHTML('beforeend', newGoodsElement);
     }
   }
 
-  let addToCartBtn = document.querySelectorAll('.search-card__button');
+  const addToCartBtn = document.querySelectorAll('.search-card__button');
 
   addToCartBtn.forEach(addToCart => {
 
