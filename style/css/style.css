@@ -342,6 +342,7 @@ body.active {
   -ms-flex-line-pack: center;
       align-content: center;
   height: 85px;
+  width: 45px;
 }
 .header .search-block__found-goods .search-card__button:hover {
   background-color: rgba(217, 217, 217, 0.3019607843);
