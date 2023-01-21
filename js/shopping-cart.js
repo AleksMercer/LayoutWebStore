@@ -139,18 +139,19 @@ deleteButton.forEach(deleteBtn => {
 
   deleteBtn.addEventListener('click', e => {
 
-    const idElement = Number(e.path[1].dataset.id);
+    //const idElement = Number(e.path[1].dataset.id);  —not working—
+    const idElement = Number(e.composedPath()[1].dataset.id);
 
-    let i = 0;
-
-    for (; i < localItems.length; i++) {
+    for (var i = 0; i < localItems.length; i++) {
       if (idElement == localItems[i].id) break;
     }
 
     localItems.splice(i, 1);
     localStorage.setItem('goodsArray', JSON.stringify(localItems));
     
-    e.path[2].remove();
+    //e.path[2].remove(); —not working—
+    e.composedPath()[2].remove();
+
     numberOfGoods();  totalCalc();  redIndicator();
   })
 })

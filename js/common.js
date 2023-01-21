@@ -9,6 +9,7 @@ const headerBurgerLink = document.querySelector('.menu-block-link');
 const headerBurgerLinkFirst = document.querySelector('.menu-block-link > a');
 
 const headerMenuFunc = () => {
+
   let headerMenuLinkVar = document.querySelectorAll('.header__menu > a')
 
   headerBurger.classList.toggle('active');
@@ -16,16 +17,17 @@ const headerMenuFunc = () => {
   document.body.classList.toggle('active');
   
   headerMenuLink.forEach(e => {
+    
     if (headerMenuLinkVar.length >= 3) {
       headerBurgerLinkFirst.before(e) 
     } else if (headerMenuLinkVar.length < 3) {
       headerMenu.append(e) 
     } 
   })
-}
+};
 
-headerMenuBtn.addEventListener('click', headerMenuFunc)
-headerBurger.addEventListener('click', headerMenuFunc)
+headerMenuBtn.addEventListener('click', headerMenuFunc);
+headerBurger.addEventListener('click', headerMenuFunc);
 
 /*——————————————————————————————————————————————————————————————————————————————*/
 
@@ -53,7 +55,7 @@ redIndicator = () => {
       shopingCartIcon.classList.remove('active');
     }
   }
-}
+};
 
 redIndicator();
 
