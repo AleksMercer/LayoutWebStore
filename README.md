@@ -13,7 +13,8 @@
 ## 📖 More about the project
   *	**Project Status**: Completed.
   *	**Adaptivity to different screens**: yes.
-  *	**Tasted & work on**: google chrome (blink).
+  *	**Tasted & work on**:
+    *	Google Chrome (blink).
 ## 🔍 Technical info
   *	Interaction with json-file in which the goods
   *	Interaction with Local-Storage for cart.
