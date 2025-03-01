@@ -1,6 +1,7 @@
 /*———Import goods from JSON-file———————————————————————————————————————————————————————————————————————————*/
 
-import JSONproducts from './../json/products.json' assert {type: 'json'};
+const response = await fetch('./json/products.json')
+const JSONproducts = await response.json();
 
 const goodsBlock = document.querySelector('.goods__block');
 const productsArray = JSONproducts.products;

@@ -1,6 +1,7 @@
 /*———Search—————————————————————————————————————————————————————————————————————*/
 
-import JSONproducts from './../json/products.json' assert {type: 'json'};
+const response = await fetch('./json/products.json')
+const JSONproducts = await response.json();
 
 const searchButton = document.querySelector('.search-button');
 const searchBlock = document.querySelector('.search-block');
